@@ -42,4 +42,30 @@ body {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+.footer {
+      bottom: 9px;
+      right: 00px;
+            position: absolute;
+          height: 20px;
+          width: 50%;
+          box-shadow: 0px 0px 0px black;
+          z-index: 1;
+      text-align:right;
+    }
 
+    
+.footer2 {
+      bottom: 9px;
+      left: 0px;
+      position: absolute;
+          height: 20px;
+          width: 50%;
+          box-shadow: 0px 0px 0px black;
+          z-index: 1;
+      text-align:left;
+    }
+
+.frame {
+      
+      width: 10px;
+}

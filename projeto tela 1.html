@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link id = "base" href="CSS/style.css" rel="stylesheet">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=chrome">
@@ -9,29 +10,34 @@
   <meta name="author" content="Alvaro Pereira do Nascimento">
   <title> Login </title>
 
-  <link id="slate "href="CSS/slate-bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link id ="cyborg" href="CSS/cyborg-bootstrap.min.css" rel="stylesheet" type="text/css"/> 
-  <link id="cosmo" href="CSS/cosmo-bootstrap.min.css" rel="stylesheet" type="text/css"/>
-  <link id="lumen" href="CSS/lumen-bootstrap.min.css" rel="stylesheet" type="text/css"/> 
-  <link id = "base" href="CSS/style.css" rel="stylesheet">
+  <link id="slate "href="CSS/slate-bootstrap.min.css" rel="stylesheet" type="text/css">  
   
-<script type="text/javascript">
-		// this will work in IE 10, 11 and Safari/Chrome/Firefox/Edge
-	// add ES6 poly-fill for the Promise, if needed (or rewrite to use a callback)
-		let fetchStyle = function(url) {
-		  return new Promise((resolve, reject) => {
-		    let link = document.createElement('link');
-		    link.type = 'text/css';
-		    link.rel = 'stylesheet';
-		    link.onload = function() { resolve(); console.log('style has loaded'); };
-		    link.href = url;
+      <script type="text/javascript">
+    // this will work in IE 10, 11 and Safari/Chrome/Firefox/Edge
+  // add ES6 poly-fill for the Promise, if needed (or rewrite to use a callback)
+    let fetchStyle = function(url) {
+      return new Promise((resolve, reject) => {
+        let link = document.createElement('link');
+        link.type = 'text/css';
+        link.rel = 'stylesheet';
+        link.onload = function() { resolve(); console.log('style has loaded'); };
+        link.href = url;
 
-		    let headScript = document.querySelector('script');
-		    headScript.parentNode.insertBefore(link, headScript);
-		  });
-		};
+        let headScript = document.querySelector('script');
+        headScript.parentNode.insertBefore(link, headScript);
+      });
+    };
+  function addcss(css){
+    var head = document.getElementsByTagName('head')[0];
+    head.removeChild(head.childNodes[8])
+    var s = document.createElement('link');
+    s.rel  = 'stylesheet';
+    s.type = 'text/css';
+    s.href = css;
+    s.media = 'all';
+    head.appendChild(s);
+ }
 </script>
-
  </head>
 <body>
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -53,17 +59,17 @@
         <div class="col-md-6"><a class="btn btn-link" href="#" role="button" style="color: #8B8682">Esqueci a senha</a></div>
         <div class="col-md-6"><a class="btn btn-link pull-right " href="#" role="button" style="color: #8B8682">Registrar</a></div>
     </div>
-		
-
     </form>
 
   </div>
-  <div id="quadrado" style="color: #8B8682" >
-
-<button onclick="function('CSS/lumen-bootstrap.min.css')">Lumen</button>
-<button onclick="function('CSS/cosmo-bootstrap.min.css')">Cosmo</button>
-<button onclick="function('CSS/cyborg-bootstrap.min.css')">Cyborg</button>
-
+  <div id="quadrado" class="footer" style="color: #8B8682" class="frame">
+    <button onclick="addcss('CSS/lumen-bootstrap.min.css')">Lumen</button>
+    <button onclick="addcss('CSS/cosmo-bootstrap.min.css')">Cosmo</button>
+    <button onclick="addcss('CSS/cyborg-bootstrap.min.css')">Cyborg</button>
+    <button onclick="addcss('CSS/slate-bootstrap.min.css')">Slate</button>
+  </div>
+<div id="quadrado2" class="footer2" style="color: #8B8682" class="frame"> 
+  Created by: <a href="https://goo.gl/oEBmUL" target="_blank" style="color: #8B8682" >Alvaro Pereira do Nascimento</a>
 </div>
 
 
