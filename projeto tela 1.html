@@ -12,31 +12,8 @@
 
   <link id="slate "href="CSS/slate-bootstrap.min.css" rel="stylesheet" type="text/css">  
   
-      <script type="text/javascript">
-    // this will work in IE 10, 11 and Safari/Chrome/Firefox/Edge
-  // add ES6 poly-fill for the Promise, if needed (or rewrite to use a callback)
-    let fetchStyle = function(url) {
-      return new Promise((resolve, reject) => {
-        let link = document.createElement('link');
-        link.type = 'text/css';
-        link.rel = 'stylesheet';
-        link.onload = function() { resolve(); console.log('style has loaded'); };
-        link.href = url;
+      <script type="text/javascript" href:"javascript/main.js>
 
-        let headScript = document.querySelector('script');
-        headScript.parentNode.insertBefore(link, headScript);
-      });
-    };
-  function addcss(css){
-    var head = document.getElementsByTagName('head')[0];
-    head.removeChild(head.childNodes[8])
-    var s = document.createElement('link');
-    s.rel  = 'stylesheet';
-    s.type = 'text/css';
-    s.href = css;
-    s.media = 'all';
-    head.appendChild(s);
- }
 </script>
  </head>
 <body>
@@ -48,7 +25,7 @@
     </div>
   </nav>
   <div class="container login">
-  	<!--<h2 class="form-signin-heading"><img src="css/logoLogin.png"/></h2>-->
+  	<h2 class="form-signin-heading"><img src="css/image.png"/></h2>
 	<form class="form-signin">
   		<label for="email" class="sr-only">Usuário</label>
       	<input id="email" class="form-control" placeholder="Usuário" required="" autofocus="" type="text">
