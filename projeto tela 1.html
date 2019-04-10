@@ -9,12 +9,28 @@
   <meta name="author" content="Alvaro Pereira do Nascimento">
   <title> Login </title>
 
-  <link id="slate "href="css/slate-bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link id ="cyborg" href="css/cyborg-bootstrap.min" rel="stylesheet" type="text/css"/> 
-  <link id="cosmo" href="css/cosmo-bootstrap.min" rel="stylesheet" type="text/css"/>
-  <link id="lumen" href="css/lumen-bootstrap.min" rel="stylesheet" type="text/css"/> 
-  <link id = "base" href="css/style.css" rel="stylesheet">
+  <link id="slate "href="CSS/slate-bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link id ="cyborg" href="CSS/cyborg-bootstrap.min.css" rel="stylesheet" type="text/css"/> 
+  <link id="cosmo" href="CSS/cosmo-bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link id="lumen" href="CSS/lumen-bootstrap.min.css" rel="stylesheet" type="text/css"/> 
+  <link id = "base" href="CSS/style.css" rel="stylesheet">
   
+<script type="text/javascript">
+		// this will work in IE 10, 11 and Safari/Chrome/Firefox/Edge
+	// add ES6 poly-fill for the Promise, if needed (or rewrite to use a callback)
+		let fetchStyle = function(url) {
+		  return new Promise((resolve, reject) => {
+		    let link = document.createElement('link');
+		    link.type = 'text/css';
+		    link.rel = 'stylesheet';
+		    link.onload = function() { resolve(); console.log('style has loaded'); };
+		    link.href = url;
+
+		    let headScript = document.querySelector('script');
+		    headScript.parentNode.insertBefore(link, headScript);
+		  });
+		};
+</script>
 
  </head>
 <body>
@@ -37,40 +53,17 @@
         <div class="col-md-6"><a class="btn btn-link" href="#" role="button" style="color: #8B8682">Esqueci a senha</a></div>
         <div class="col-md-6"><a class="btn btn-link pull-right " href="#" role="button" style="color: #8B8682">Registrar</a></div>
     </div>
-		<script type="text/javascript">
-		  	$(".trocacssbtn").on("click", function(e){
-		    e.preventDefault();
-		    $("link").attr("href", "css/lumen-bootstrap.min.css" );
-			});
-		function loadCSS(url) {
-		    var lnk = document.createElement('link');
-		    lnk.setAttribute('type', "text/css" );
-		    lnk.setAttribute('rel', "stylesheet" );
-		    lnk.setAttribute('href', url );
-		    document.getElementsByTagName("head").item(0).appendChild(lnk);
-		}	
-		$(".seleciona-estilo").on("click", function(e){
-		    e.preventDefault();
-		    $("link").attr("href", "nome-do-arquivo.css");
-		});
-		</script>
+		
 
     </form>
 
   </div>
   <div id="quadrado" style="color: #8B8682" >
-<ul>
-    <li><a href="#" class="seleciona-estilo" data-classe="css/lumen-bootstrap.min.css">Azul</a></li>
-    <li><a href="#" class="seleciona-estilo" data-classe="css/cosmo-bootstrap.min.css">Verde</a></li>
-</ul>
 
-<a href="css/cyborg-bootstrap.min.css" class="loadCSS(css/cyborg-bootstrap.min.css)"style="color: #8B8682" >Trocar para cyborg</a><br>
-<a href="css/cosmo-bootstrap.min.css" class="loadCSS(css/cosmo-bootstrap.min.css)" style="color: #8B8682">Trocar para cosmo</a><br>
-<a href="css/lumen-bootstrap.min.css" class="loadCSS(css/lumen-bootstrap.min.css)" style="color: #8B8682">Trocar para lumen</a><br>
+<button onclick="function('CSS/lumen-bootstrap.min.css')">Lumen</button>
+<button onclick="function('CSS/cosmo-bootstrap.min.css')">Cosmo</button>
+<button onclick="function('CSS/cyborg-bootstrap.min.css')">Cyborg</button>
 
-<button name="button" style="color: #8B8682" href="css/lumen-bootstrap.min.css" class="loadCSS(css/cyborg-bootstrap.min.css)">Lumen</button>
-<button name="button" style="color: #8B8682" href="css/cosmo-bootstrap.min.css" class="loadCSS(css/cosmo-bootstrap.min.css)">Cosmo</button>
-<button name="button" style="color: #8B8682" href="css/cyborg-bootstrap.min.css" class="loadCSS(css/lumen-bootstrap.min.css)">Cyborg</button>
 </div>
 
 
