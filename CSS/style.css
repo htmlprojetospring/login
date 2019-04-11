@@ -52,6 +52,24 @@ body {
           z-index: 1;
       text-align:right;
     }
+.midler {
+      right: 150px;
+            position: absolute;
+          height: 50%;
+          width: 50%;
+          box-shadow: 0px 0px 0px black;
+          z-index: 1;
+      text-align:right;
+    }
+.midlel {
+      left: 10px;
+      position: absolute;
+          height: 50%;
+          width: 50%;
+          box-shadow: 0px 0px 0px black;
+          z-index: 1;
+      text-align:left;
+    }
 
     
 .footer2 {
