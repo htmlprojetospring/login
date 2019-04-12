@@ -43,7 +43,7 @@ body {
   border-top-right-radius: 0;
 }
 .footer {
-      bottom: 9px;
+      bottom: 27px;
       right: 00px;
             position: absolute;
           height: 20px;
@@ -53,16 +53,16 @@ body {
       text-align:right;
     }
 .midler {
-      right: 150px;
+      right: 20%;
             position: absolute;
           height: 50%;
           width: 50%;
           box-shadow: 0px 0px 0px black;
           z-index: 1;
-      text-align:right;
+      text-align:center;
     }
 .midlel {
-      left: 10px;
+      left: 10%;
       position: absolute;
           height: 50%;
           width: 50%;
@@ -73,7 +73,7 @@ body {
 
     
 .footer2 {
-      bottom: 9px;
+      bottom: 1px;
       left: 0px;
       position: absolute;
           height: 20px;
